@@ -13,7 +13,7 @@ func handleProducts(w http.ResponseWriter, r *http.Request) {
 	}
 	defer rows.Close()
 
-	fmt.Fprintln(w, "<h1>Product List</h1>")
+	fmt.Fprintln(w, "<h1>List Produits</h1>")
 	fmt.Fprintln(w, "<ul>")
 	for rows.Next() {
 		var p Product
@@ -28,8 +28,8 @@ func handleProducts(w http.ResponseWriter, r *http.Request) {
 }
 
 func handleHome(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "<h1>Welcome to the Product Manager</h1>")
-	fmt.Fprintln(w, "<p><a href='/products'>View Products</a></p>")
+	fmt.Fprintln(w, "<h1>Server Produits</h1>")
+	fmt.Fprintln(w, "<p><a href='/products'>Afficher les Produits</a></p>")
 }
 
 func startServer() {
