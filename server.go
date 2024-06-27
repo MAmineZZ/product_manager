@@ -27,7 +27,13 @@ func handleProducts(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, "</ul>")
 }
 
+func handleHome(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "<h1>Welcome to the Product Manager</h1>")
+	fmt.Fprintln(w, "<p><a href='/products'>View Products</a></p>")
+}
+
 func startServer() {
+	http.HandleFunc("/", handleHome)
 	http.HandleFunc("/products", handleProducts)
 	fmt.Println("Starting server on :8080")
 	http.ListenAndServe(":8080", nil)

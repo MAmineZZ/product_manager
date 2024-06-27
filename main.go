@@ -24,7 +24,7 @@ func main() {
 		fmt.Println("6. Lancer un serveur Http avec une page web")
 		fmt.Println("7. Se connecter à une VM en ssh")
 		fmt.Println("8. Se connecter à un serveur FTP")
-		fmt.Println("9. Lancer l'interface graphique")
+		// fmt.Println("9. Lancer l'interface graphique")
 		fmt.Println("10. Quitter")
 		fmt.Print("Choisissez une option: ")
 
